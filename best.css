@@ -81,8 +81,20 @@ div:hover{
        linear infinite;
 }
 @keyframes op{
+    from{
+    
+        background-size: cover;
+        transition-duration: 10s;
+        transition-timing-function: ease-in;
+        border-color: 5px solid red;
+    }
     to{
+    
+        background-size: cover;
+        transition-duration: 10s;
         transform: rotate(360deg);
+        transition-timing-function: ease-in;
+        border-color: 10px solid blue;
     }
 }
 .down{
@@ -99,8 +111,6 @@ div:hover{
     height: 150px;
     width: 150px;
     transition-duration: 3s;
-    background-image: url(parvez.jpg);
-    background-size: cover;
 }
 .up{
     background-color: white;
@@ -113,8 +123,6 @@ div:hover{
     height: 150px;
     width: 150px;
     transition-duration: 3s;
-    background-image: url(ahil.jpg);
-    background-size: cover;
     left: 25%;
     bottom: 25%;
 }
@@ -123,8 +131,32 @@ div:hover{
     background-color: white;
 }
 .on:hover{
-    background-color: rgb(255, 182, 255);
+    background-image: url(parvez.jpg);
+    background-size: cover;
     color: crimson;
     font-size: 50px;
     border-radius: 50%;
+    top: 50%;
+    animation: pok 5s
+        linear infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes pok {
+    from{
+        background-image: url(ahil.jpg);
+        background-size: cover;
+        height: 150px;
+        width: 150px;
+        transition-timing-function: ease-in;
+    }
+    to{
+        background-image: url(parvez.jpg);
+        background-size: cover;
+        height: 350px;
+        width: 350px;
+        transition-timing-function: ease-in;
+    }
+}
+.off:hover{
+    color: blue;
 }
